@@ -1,0 +1,12 @@
+extends: airbnb
+plugins:
+  - react
+
+rules:
+  no-mixed-operators: 0
+  quotes: ["error", "double"]
+  react/forbid-prop-types: 0
+  react/jsx-filename-extension: 0
+  react/jsx-tag-spacing: 0
+  react/no-array-index-key: 0
+  react/require-default-props: 0
