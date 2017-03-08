@@ -1,0 +1,41 @@
+.Worm {
+  position: relative;
+  text-align: left;
+
+  &-row {
+    display: table;
+    width: 100%;
+    border-spacing: 0.7em;
+  }
+
+  &-col {
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+  }
+
+  &-score {
+    margin: 0 auto;
+    border-radius: 50%;
+
+    &:after {
+      $size: 100px;
+      content: attr(data-score);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      height: $size;
+      width: $size;
+      line-height: $size;
+      margin-top: -$size/2;
+      margin-left: -$size/2;
+      text-align: center;
+    }
+  }
+
+  &-shape {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}
