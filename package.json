@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "http://dmfrancisco.github.io/react-worms",
+  "main": "src/Worm.js",
   "devDependencies": {
     "d3": "^4.7.1",
     "gh-pages": "^0.12.0",
@@ -14,8 +15,8 @@
   },
   "peerDependencies": {
     "d3": "^4.7.1",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react": ">=0.14.0",
+    "react-dom": ">=0.14.0"
   },
   "scripts": {
     "start": "npm-run-all -p watch-css start-js",
@@ -27,5 +28,18 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015",
+            "react"
+          ]
+        }
+      ]
+    ]
   }
 }

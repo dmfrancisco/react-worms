@@ -3,6 +3,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Worm from "./Worm";
+import "./Worm.css";
 
 const Demo = () => (
   <div>
