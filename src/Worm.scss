@@ -18,10 +18,22 @@
     margin: 0 auto;
     border-radius: 50%;
 
+    &:before,
+    &:after {
+      position: absolute;
+      text-align: center;
+    }
+
+    &:before {
+      content: attr(data-label);
+      right: 0;
+      left: 0;
+      margin-top: 0.5em;
+    }
+
     &:after {
       $size: 100px;
       content: attr(data-score);
-      position: absolute;
       left: 50%;
       top: 50%;
       height: $size;
@@ -29,7 +41,6 @@
       line-height: $size;
       margin-top: -$size/2;
       margin-left: -$size/2;
-      text-align: center;
     }
   }
 

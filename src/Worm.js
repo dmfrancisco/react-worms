@@ -3,9 +3,6 @@ import * as d3 from "d3";
 import "./Worm.css";
 
 class Worm extends Component {
-  scoreToIndex(score, len) {
-    return Math.round((score - this.props.min) * (len - 1) / (this.props.max - this.props.min));
-  }
   getColor(score) {
     const index = this.scoreToIndex(score, this.props.colors.length);
     return this.props.colors[index];
@@ -13,6 +10,9 @@ class Worm extends Component {
   getSize(score) {
     const index = this.scoreToIndex(score, this.props.sizes.length);
     return this.props.sizes[index];
+  }
+  scoreToIndex(score, len) {
+    return Math.round((score - this.props.min) * (len - 1) / (this.props.max - this.props.min));
   }
   renderShape(xmax = 100, ymax = 100) {
     const line = d3.line().x(d => d.x).y(d => d.y).curve(d3.curveCatmullRom.alpha(0.35));
@@ -47,14 +47,15 @@ class Worm extends Component {
 
       return (
         <div key={i} className="Worm-col">
-          <div className="Worm-score" style={styles} data-score={score} />
+          <div className="Worm-score" style={styles}
+            data-score={score} data-label={this.props.labels[i]} />
         </div>
       );
     });
   }
   render() {
     return (
-      <div className="Worm">
+      <div className={`Worm ${this.props.className}`}>
         { this.renderShape() }
         <div className="Worm-row">
           { this.renderScores() }
@@ -66,7 +67,9 @@ class Worm extends Component {
 
 Worm.propTypes = {
   bgdColor: React.PropTypes.string,
+  className: React.PropTypes.string,
   colors: React.PropTypes.array,
+  labels: React.PropTypes.array,
   max: React.PropTypes.number.isRequired,
   min: React.PropTypes.number.isRequired,
   scores: React.PropTypes.array.isRequired,
@@ -76,7 +79,9 @@ Worm.propTypes = {
 
 Worm.defaultProps = {
   bgdColor: "#eee",
+  className: "",
   colors: ["#fd938e", "#f1c83f", "#f8e71c", "#b8e986", "#7ed321"],
+  labels: [],
   sizes: [40, 50, 70, 80, 90],
 };
 
