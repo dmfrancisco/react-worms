@@ -8,8 +8,12 @@ const Demo = () => (
   <div>
     <h1>React Component for Worm Charts</h1>
 
-    <Worm scores={[4, 8, 15, 16, 23, 42]} min={0} max={50} />
-    <code>{"<Worm scores={[4, 8, 15, 16, 23, 42]} min={0} max={50} />"}</code>
+    <Worm scores={[4, 8, 15, 16, 23, 42]}
+      labels={["Lorem", "Ipsum", "Dolor", "Sit", "Amet", "Consectetur"]}
+      min={0} max={50} />
+    <code>{`<Worm scores={[4, 8, 15, 16, 23, 42]}
+      labels={["Lorem", "Ipsum", "Dolor", "Sit", "Amet", "Consectetur"]}
+      min={0} max={50} />`}</code>
 
     <Worm min={1} max={100} scores={[1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]}
       bgdColor="#253b6b" colors={["#4b67a5"]} styles={{ color: "white" }} />
@@ -32,8 +36,10 @@ const Demo = () => (
       colors={["#ccc", "#d6e685", "#8cc665", "#44a340", "#1e6823"]} />`}</code>
 
     <Worm min={1} max={7} scores={[1, 7, 7, 6]} sizes={[30]}
+      labels={["Charts", "created", "for", "Union"]} className="Worm--custom"
       colors={["#bf2636", "#2683bf"]} styles={{ color: "white", fontSize: "1.4em" }} />
     <code>{`<Worm min={1} max={7} scores={[1, 7, 7, 6]} sizes={[30]}
+      labels={["Charts", "created", "for", "Union"]} className="Worm--custom"
       colors={["#bf2636", "#2683bf"]} styles={{ color: "white", fontSize: "1.4em" }} />`}</code>
   </div>
 );
