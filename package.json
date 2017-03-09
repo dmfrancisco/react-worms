@@ -3,16 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "http://dmfrancisco.github.io/react-worms",
-  "dependencies": {
-    "d3": "^4.7.1",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2"
-  },
   "devDependencies": {
+    "d3": "^4.7.1",
     "gh-pages": "^0.12.0",
     "node-sass": "^4.5.0",
     "npm-run-all": "^4.0.2",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
     "react-scripts": "0.9.3"
+  },
+  "peerDependencies": {
+    "d3": "^4.7.1",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
   },
   "scripts": {
     "start": "npm-run-all -p watch-css start-js",
