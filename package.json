@@ -2,44 +2,39 @@
   "name": "react-worms",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://dmfrancisco.github.io/react-worms",
-  "main": "src/Worm.js",
-  "devDependencies": {
-    "d3": "^4.7.1",
-    "gh-pages": "^0.12.0",
-    "node-sass": "^4.5.0",
-    "npm-run-all": "^4.0.2",
-    "react": "^15.4.2",
-    "react-dom": "^15.4.2",
-    "react-scripts": "0.9.3"
-  },
-  "peerDependencies": {
-    "d3": "^4.7.1",
-    "react": ">=0.14.0",
-    "react-dom": ">=0.14.0"
-  },
+  "description": "A React Component for Worm Charts",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "files": [
+    "css",
+    "es",
+    "lib",
+    "umd"
+  ],
   "scripts": {
-    "start": "npm-run-all -p watch-css start-js",
-    "start-js": "react-scripts start",
-    "build": "npm run build-css && react-scripts build",
-    "build-css": "node-sass src/ -o src/",
-    "watch-css": "npm run build-css && node-sass src/ -o src/ --watch --recursive",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "build": "nwb build-react-component",
+    "clean": "nwb clean-module && nwb clean-demo",
+    "start": "nwb serve-react-demo",
+    "test": "nwb test-react",
+    "test:coverage": "nwb test-react --coverage",
+    "test:watch": "nwb test-react --server"
   },
-  "browserify": {
-    "transform": [
-      [
-        "babelify",
-        {
-          "presets": [
-            "es2015",
-            "react"
-          ]
-        }
-      ]
-    ]
-  }
+  "dependencies": {},
+  "peerDependencies": {
+    "d3": "^4.9.1",
+    "react": "15.x",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "d3": "^4.9.1",
+    "nwb": "0.16.x",
+    "nwb-sass": "^0.8.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "homepage": "http://dmfrancisco.github.io/react-worms",
+  "license": "MIT",
+  "keywords": [
+    "react-component"
+  ]
 }

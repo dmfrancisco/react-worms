@@ -1,48 +1,87 @@
-/* globals document */
+import React, { Component } from "react";
+import * as d3 from "d3";
 
-import React from "react";
-import ReactDOM from "react-dom";
-import Worm from "./Worm";
-import "./Worm.css";
+class Worm extends Component {
+  getColor(score) {
+    const index = this.scoreToIndex(score, this.props.colors.length);
+    return this.props.colors[index];
+  }
+  getSize(score) {
+    const index = this.scoreToIndex(score, this.props.sizes.length);
+    return this.props.sizes[index];
+  }
+  scoreToIndex(score, len) {
+    return Math.round((score - this.props.min) * (len - 1) / (this.props.max - this.props.min));
+  }
+  renderShape(xmax = 100, ymax = 100) {
+    const line = d3.line().x(d => d.x).y(d => d.y).curve(d3.curveCatmullRom.alpha(0.35));
+    const maxSize = Math.max(...this.props.sizes);
+    const data = [{ x: 0, y: 0 }];
+    let x = (xmax / this.props.scores.length) / 2;
 
-const Demo = () => (
-  <div>
-    <h1>React Component for Worm Charts</h1>
+    this.props.scores.forEach((score) => {
+      const y = this.getSize(score) * 100 / maxSize;
+      data.push({ x, y });
+      x += xmax / this.props.scores.length;
+    });
+    data.push({ x: xmax, y: 0 });
 
-    <Worm scores={[4, 8, 15, 16, 23, 42]}
-      labels={["Lorem", "Ipsum", "Dolor", "Sit", "Amet", "Consectetur"]}
-      min={0} max={50} />
-    <code>{`<Worm scores={[4, 8, 15, 16, 23, 42]}
-      labels={["Lorem", "Ipsum", "Dolor", "Sit", "Amet", "Consectetur"]}
-      min={0} max={50} />`}</code>
+    return (
+      // `translate` prevents a white line from appearing in the middle in some browsers
+      <svg className="Worm-shape"
+        fill={this.props.bgdColor}
+        preserveAspectRatio="none" viewBox={`0 ${-ymax} ${xmax} ${ymax * 2}`}>
+          <path d={line(data)} transform="translate(0,2) scale(1,-1)" />
+          <path d={line(data)} transform="translate(0,-2)" />
+      </svg>
+    );
+  }
+  renderScores() {
+    return this.props.scores.map((score, i) => {
+      const styles = Object.assign({}, this.props.styles, {
+        background: this.getColor(score),
+        paddingTop: `${this.getSize(score)}%`,
+        width: `${this.getSize(score)}%`,
+      });
 
-    <Worm min={1} max={100} scores={[1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]}
-      bgdColor="#253b6b" colors={["#4b67a5"]} styles={{ color: "white" }} />
-    <code>{`<Worm min={1} max={100} scores={[1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]}
-      bgdColor="#253b6b" colors={["#4b67a5"]} styles={{ color: "white" }} />`}</code>
+      return (
+        <div key={i} className="Worm-col">
+          <div className="Worm-score" style={styles}
+            data-score={score} data-label={this.props.labels[i]} />
+        </div>
+      );
+    });
+  }
+  render() {
+    return (
+      <div className={`Worm ${this.props.className}`}>
+        { this.renderShape() }
+        <div className="Worm-row">
+          { this.renderScores() }
+        </div>
+      </div>
+    );
+  }
+}
 
-    <Worm scores={[0, 40, 60, 100, 50, 20, 10, 80]} min={0} max={100}
-      colors={["#fff", "#c6e48b", "#7bc96f", "#239a3b", "#196127"]} styles={{ color: "transparent" }} />
-    <code>{`<Worm scores={[0, 40, 60, 100, 50, 20, 10, 80]} min={0} max={100}
-      colors={["#fff", "#c6e48b", "#7bc96f", "#239a3b", "#196127"]} styles={{ color: "transparent" }} />`}</code>
+Worm.propTypes = {
+  bgdColor: React.PropTypes.string,
+  className: React.PropTypes.string,
+  colors: React.PropTypes.array,
+  labels: React.PropTypes.array,
+  max: React.PropTypes.number.isRequired,
+  min: React.PropTypes.number.isRequired,
+  scores: React.PropTypes.array.isRequired,
+  sizes: React.PropTypes.array,
+  styles: React.PropTypes.object,
+};
 
-    <Worm scores={[6, 8, 5, 8, 5]} min={5} max={10}
-      colors={["#f1c40f", "#e67e22", "#e74c3c", "#d0021b"]} />
-    <code>{`<Worm scores={[6, 8, 5, 8, 5]} min={5} max={10}
-      colors={["#f1c40f", "#e67e22", "#e74c3c", "#d0021b"]} />`}</code>
+Worm.defaultProps = {
+  bgdColor: "#eee",
+  className: "",
+  colors: ["#fd938e", "#f1c83f", "#f8e71c", "#b8e986", "#7ed321"],
+  labels: [],
+  sizes: [40, 50, 70, 80, 90],
+};
 
-    <Worm scores={[-5, -2, 0, 2, 5]} min={-5} max={5}
-      colors={["#ccc", "#d6e685", "#8cc665", "#44a340", "#1e6823"]} />
-    <code>{`<Worm scores={[-5, -2, 0, 2, 5]} min={-5} max={5}
-      colors={["#ccc", "#d6e685", "#8cc665", "#44a340", "#1e6823"]} />`}</code>
-
-    <Worm min={1} max={7} scores={[1, 7, 7, 6]} sizes={[30]}
-      labels={["Charts", "created", "for", "Union"]} className="Worm--custom"
-      colors={["#bf2636", "#2683bf"]} styles={{ color: "white", fontSize: "1.4em" }} />
-    <code>{`<Worm min={1} max={7} scores={[1, 7, 7, 6]} sizes={[30]}
-      labels={["Charts", "created", "for", "Union"]} className="Worm--custom"
-      colors={["#bf2636", "#2683bf"]} styles={{ color: "white", fontSize: "1.4em" }} />`}</code>
-  </div>
-);
-
-ReactDOM.render(<Demo />, document.getElementById("root"));
+export default Worm;
