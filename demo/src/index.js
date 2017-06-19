@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Worm from "../../src/";
-import "../../src/index.scss";
+import "../../css/index.scss";
 
 const Demo = () => (
   <div>
