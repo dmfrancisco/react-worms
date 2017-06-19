@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import * as d3 from "d3";
 
 class Worm extends Component {
@@ -65,15 +66,15 @@ class Worm extends Component {
 }
 
 Worm.propTypes = {
-  bgdColor: React.PropTypes.string,
-  className: React.PropTypes.string,
-  colors: React.PropTypes.array,
-  labels: React.PropTypes.array,
-  max: React.PropTypes.number.isRequired,
-  min: React.PropTypes.number.isRequired,
-  scores: React.PropTypes.array.isRequired,
-  sizes: React.PropTypes.array,
-  styles: React.PropTypes.object,
+  bgdColor: PropTypes.string,
+  className: PropTypes.string,
+  colors: PropTypes.array,
+  labels: PropTypes.array,
+  max: PropTypes.number.isRequired,
+  min: PropTypes.number.isRequired,
+  scores: PropTypes.array.isRequired,
+  sizes: PropTypes.array,
+  styles: PropTypes.object,
 };
 
 Worm.defaultProps = {
