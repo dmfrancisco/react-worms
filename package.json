@@ -1,7 +1,6 @@
 {
   "name": "react-worms",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
   "description": "A React Component for Worm Charts",
   "main": "lib/index.js",
   "module": "es/index.js",
