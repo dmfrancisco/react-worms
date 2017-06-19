@@ -1,0 +1,741 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly with only required props 1`] = `
+Array [
+  <div
+    className="Worm "
+>
+    <svg
+        className="Worm-shape"
+        fill="#eee"
+        preserveAspectRatio="none"
+        viewBox="0 -100 100 200"
+    >
+        <path
+            d="M0,0C0,0,2.9244986527228862,35.27443554092693,8.333333333333334,44.44444444444444C12.400914845846005,51.340524818140516,19.2538736892339,53.76326818344113,25,55.55555555555556C30.387999179015896,57.23613867664355,36.11111111111112,55.555555555555564,41.66666666666667,55.55555555555556C47.22222222222224,55.555555555555564,53.192002902790456,52.73436355426672,58.33333333333334,55.55555555555556C64.48117365489638,58.92904772352797,69.08841141861232,72.0907116933682,75.00000000000001,77.77777777777777C80.27235672507607,82.84989007099325,87.565848971262,93.09866240640353,91.66666666666669,88.88888888888889C98.58557272497116,81.78615239634463,100,0,100,0"
+            transform="translate(0,2) scale(1,-1)"
+        />
+        <path
+            d="M0,0C0,0,2.9244986527228862,35.27443554092693,8.333333333333334,44.44444444444444C12.400914845846005,51.340524818140516,19.2538736892339,53.76326818344113,25,55.55555555555556C30.387999179015896,57.23613867664355,36.11111111111112,55.555555555555564,41.66666666666667,55.55555555555556C47.22222222222224,55.555555555555564,53.192002902790456,52.73436355426672,58.33333333333334,55.55555555555556C64.48117365489638,58.92904772352797,69.08841141861232,72.0907116933682,75.00000000000001,77.77777777777777C80.27235672507607,82.84989007099325,87.565848971262,93.09866240640353,91.66666666666669,88.88888888888889C98.58557272497116,81.78615239634463,100,0,100,0"
+            transform="translate(0,-2)"
+        />
+    </svg>
+    <div
+        className="Worm-row"
+    >
+        <div
+            className="Worm-col"
+        >
+            <div
+                className="Worm-score"
+                data-label={undefined}
+                data-score={4}
+                style={
+                    Object {
+                        "background": "#fd938e",
+                        "paddingTop": "40%",
+                        "width": "40%",
+                      }
+                }
+            />
+        </div>
+        <div
+            className="Worm-col"
+        >
+            <div
+                className="Worm-score"
+                data-label={undefined}
+                data-score={8}
+                style={
+                    Object {
+                        "background": "#f1c83f",
+                        "paddingTop": "50%",
+                        "width": "50%",
+                      }
+                }
+            />
+        </div>
+        <div
+            className="Worm-col"
+        >
+            <div
+                className="Worm-score"
+                data-label={undefined}
+                data-score={15}
+                style={
+                    Object {
+                        "background": "#f1c83f",
+                        "paddingTop": "50%",
+                        "width": "50%",
+                      }
+                }
+            />
+        </div>
+        <div
+            className="Worm-col"
+        >
+            <div
+                className="Worm-score"
+                data-label={undefined}
+                data-score={16}
+                style={
+                    Object {
+                        "background": "#f1c83f",
+                        "paddingTop": "50%",
+                        "width": "50%",
+                      }
+                }
+            />
+        </div>
+        <div
+            className="Worm-col"
+        >
+            <div
+                className="Worm-score"
+                data-label={undefined}
+                data-score={23}
+                style={
+                    Object {
+                        "background": "#f8e71c",
+                        "paddingTop": "70%",
+                        "width": "70%",
+                      }
+                }
+            />
+        </div>
+        <div
+            className="Worm-col"
+        >
+            <div
+                className="Worm-score"
+                data-label={undefined}
+                data-score={42}
+                style={
+                    Object {
+                        "background": "#b8e986",
+                        "paddingTop": "80%",
+                        "width": "80%",
+                      }
+                }
+            />
+        </div>
+    </div>
+</div>,
+]
+`;
+
+exports[`supports custom classNames 1`] = `
+Array [
+  <div
+    className="Worm Worm--custom"
+>
+    <svg
+        className="Worm-shape"
+        fill="#eee"
+        preserveAspectRatio="none"
+        viewBox="0 -100 100 200"
+    >
+        <path
+            d="M0,0C0,0,2.9244986527228862,35.27443554092693,8.333333333333334,44.44444444444444C12.400914845846005,51.340524818140516,19.2538736892339,53.76326818344113,25,55.55555555555556C30.387999179015896,57.23613867664355,36.11111111111112,55.555555555555564,41.66666666666667,55.55555555555556C47.22222222222224,55.555555555555564,53.192002902790456,52.73436355426672,58.33333333333334,55.55555555555556C64.48117365489638,58.92904772352797,69.08841141861232,72.0907116933682,75.00000000000001,77.77777777777777C80.27235672507607,82.84989007099325,87.565848971262,93.09866240640353,91.66666666666669,88.88888888888889C98.58557272497116,81.78615239634463,100,0,100,0"
+            transform="translate(0,2) scale(1,-1)"
+        />
+        <path
+            d="M0,0C0,0,2.9244986527228862,35.27443554092693,8.333333333333334,44.44444444444444C12.400914845846005,51.340524818140516,19.2538736892339,53.76326818344113,25,55.55555555555556C30.387999179015896,57.23613867664355,36.11111111111112,55.555555555555564,41.66666666666667,55.55555555555556C47.22222222222224,55.555555555555564,53.192002902790456,52.73436355426672,58.33333333333334,55.55555555555556C64.48117365489638,58.92904772352797,69.08841141861232,72.0907116933682,75.00000000000001,77.77777777777777C80.27235672507607,82.84989007099325,87.565848971262,93.09866240640353,91.66666666666669,88.88888888888889C98.58557272497116,81.78615239634463,100,0,100,0"
+            transform="translate(0,-2)"
+        />
+    </svg>
+    <div
+        className="Worm-row"
+    >
+        <div
+            className="Worm-col"
+        >
+            <div
+                className="Worm-score"
+                data-label={undefined}
+                data-score={4}
+                style={
+                    Object {
+                        "background": "#fd938e",
+                        "paddingTop": "40%",
+                        "width": "40%",
+                      }
+                }
+            />
+        </div>
+        <div
+            className="Worm-col"
+        >
+            <div
+                className="Worm-score"
+                data-label={undefined}
+                data-score={8}
+                style={
+                    Object {
+                        "background": "#f1c83f",
+                        "paddingTop": "50%",
+                        "width": "50%",
+                      }
+                }
+            />
+        </div>
+        <div
+            className="Worm-col"
+        >
+            <div
+                className="Worm-score"
+                data-label={undefined}
+                data-score={15}
+                style={
+                    Object {
+                        "background": "#f1c83f",
+                        "paddingTop": "50%",
+                        "width": "50%",
+                      }
+                }
+            />
+        </div>
+        <div
+            className="Worm-col"
+        >
+            <div
+                className="Worm-score"
+                data-label={undefined}
+                data-score={16}
+                style={
+                    Object {
+                        "background": "#f1c83f",
+                        "paddingTop": "50%",
+                        "width": "50%",
+                      }
+                }
+            />
+        </div>
+        <div
+            className="Worm-col"
+        >
+            <div
+                className="Worm-score"
+                data-label={undefined}
+                data-score={23}
+                style={
+                    Object {
+                        "background": "#f8e71c",
+                        "paddingTop": "70%",
+                        "width": "70%",
+                      }
+                }
+            />
+        </div>
+        <div
+            className="Worm-col"
+        >
+            <div
+                className="Worm-score"
+                data-label={undefined}
+                data-score={42}
+                style={
+                    Object {
+                        "background": "#b8e986",
+                        "paddingTop": "80%",
+                        "width": "80%",
+                      }
+                }
+            />
+        </div>
+    </div>
+</div>,
+]
+`;
+
+exports[`supports custom colors 1`] = `
+Array [
+  <div
+    className="Worm "
+>
+    <svg
+        className="Worm-shape"
+        fill="#253b6b"
+        preserveAspectRatio="none"
+        viewBox="0 -100 100 200"
+    >
+        <path
+            d="M0,0C0,0,2.9244986527228862,35.27443554092693,8.333333333333334,44.44444444444444C12.400914845846005,51.340524818140516,19.2538736892339,53.76326818344113,25,55.55555555555556C30.387999179015896,57.23613867664355,36.11111111111112,55.555555555555564,41.66666666666667,55.55555555555556C47.22222222222224,55.555555555555564,53.192002902790456,52.73436355426672,58.33333333333334,55.55555555555556C64.48117365489638,58.92904772352797,69.08841141861232,72.0907116933682,75.00000000000001,77.77777777777777C80.27235672507607,82.84989007099325,87.565848971262,93.09866240640353,91.66666666666669,88.88888888888889C98.58557272497116,81.78615239634463,100,0,100,0"
+            transform="translate(0,2) scale(1,-1)"
+        />
+        <path
+            d="M0,0C0,0,2.9244986527228862,35.27443554092693,8.333333333333334,44.44444444444444C12.400914845846005,51.340524818140516,19.2538736892339,53.76326818344113,25,55.55555555555556C30.387999179015896,57.23613867664355,36.11111111111112,55.555555555555564,41.66666666666667,55.55555555555556C47.22222222222224,55.555555555555564,53.192002902790456,52.73436355426672,58.33333333333334,55.55555555555556C64.48117365489638,58.92904772352797,69.08841141861232,72.0907116933682,75.00000000000001,77.77777777777777C80.27235672507607,82.84989007099325,87.565848971262,93.09866240640353,91.66666666666669,88.88888888888889C98.58557272497116,81.78615239634463,100,0,100,0"
+            transform="translate(0,-2)"
+        />
+    </svg>
+    <div
+        className="Worm-row"
+    >
+        <div
+            className="Worm-col"
+        >
+            <div
+                className="Worm-score"
+                data-label={undefined}
+                data-score={4}
+                style={
+                    Object {
+                        "background": "#c6e48b",
+                        "paddingTop": "40%",
+                        "width": "40%",
+                      }
+                }
+            />
+        </div>
+        <div
+            className="Worm-col"
+        >
+            <div
+                className="Worm-score"
+                data-label={undefined}
+                data-score={8}
+                style={
+                    Object {
+                        "background": "#c6e48b",
+                        "paddingTop": "50%",
+                        "width": "50%",
+                      }
+                }
+            />
+        </div>
+        <div
+            className="Worm-col"
+        >
+            <div
+                className="Worm-score"
+                data-label={undefined}
+                data-score={15}
+                style={
+                    Object {
+                        "background": "#7bc96f",
+                        "paddingTop": "50%",
+                        "width": "50%",
+                      }
+                }
+            />
+        </div>
+        <div
+            className="Worm-col"
+        >
+            <div
+                className="Worm-score"
+                data-label={undefined}
+                data-score={16}
+                style={
+                    Object {
+                        "background": "#7bc96f",
+                        "paddingTop": "50%",
+                        "width": "50%",
+                      }
+                }
+            />
+        </div>
+        <div
+            className="Worm-col"
+        >
+            <div
+                className="Worm-score"
+                data-label={undefined}
+                data-score={23}
+                style={
+                    Object {
+                        "background": "#7bc96f",
+                        "paddingTop": "70%",
+                        "width": "70%",
+                      }
+                }
+            />
+        </div>
+        <div
+            className="Worm-col"
+        >
+            <div
+                className="Worm-score"
+                data-label={undefined}
+                data-score={42}
+                style={
+                    Object {
+                        "background": "#196127",
+                        "paddingTop": "80%",
+                        "width": "80%",
+                      }
+                }
+            />
+        </div>
+    </div>
+</div>,
+]
+`;
+
+exports[`supports custom labels 1`] = `
+Array [
+  <div
+    className="Worm "
+>
+    <svg
+        className="Worm-shape"
+        fill="#eee"
+        preserveAspectRatio="none"
+        viewBox="0 -100 100 200"
+    >
+        <path
+            d="M0,0C0,0,2.9244986527228862,35.27443554092693,8.333333333333334,44.44444444444444C12.400914845846005,51.340524818140516,19.2538736892339,53.76326818344113,25,55.55555555555556C30.387999179015896,57.23613867664355,36.11111111111112,55.555555555555564,41.66666666666667,55.55555555555556C47.22222222222224,55.555555555555564,53.192002902790456,52.73436355426672,58.33333333333334,55.55555555555556C64.48117365489638,58.92904772352797,69.08841141861232,72.0907116933682,75.00000000000001,77.77777777777777C80.27235672507607,82.84989007099325,87.565848971262,93.09866240640353,91.66666666666669,88.88888888888889C98.58557272497116,81.78615239634463,100,0,100,0"
+            transform="translate(0,2) scale(1,-1)"
+        />
+        <path
+            d="M0,0C0,0,2.9244986527228862,35.27443554092693,8.333333333333334,44.44444444444444C12.400914845846005,51.340524818140516,19.2538736892339,53.76326818344113,25,55.55555555555556C30.387999179015896,57.23613867664355,36.11111111111112,55.555555555555564,41.66666666666667,55.55555555555556C47.22222222222224,55.555555555555564,53.192002902790456,52.73436355426672,58.33333333333334,55.55555555555556C64.48117365489638,58.92904772352797,69.08841141861232,72.0907116933682,75.00000000000001,77.77777777777777C80.27235672507607,82.84989007099325,87.565848971262,93.09866240640353,91.66666666666669,88.88888888888889C98.58557272497116,81.78615239634463,100,0,100,0"
+            transform="translate(0,-2)"
+        />
+    </svg>
+    <div
+        className="Worm-row"
+    >
+        <div
+            className="Worm-col"
+        >
+            <div
+                className="Worm-score"
+                data-label="Lorem"
+                data-score={4}
+                style={
+                    Object {
+                        "background": "#fd938e",
+                        "paddingTop": "40%",
+                        "width": "40%",
+                      }
+                }
+            />
+        </div>
+        <div
+            className="Worm-col"
+        >
+            <div
+                className="Worm-score"
+                data-label="Ipsum"
+                data-score={8}
+                style={
+                    Object {
+                        "background": "#f1c83f",
+                        "paddingTop": "50%",
+                        "width": "50%",
+                      }
+                }
+            />
+        </div>
+        <div
+            className="Worm-col"
+        >
+            <div
+                className="Worm-score"
+                data-label="Dolor"
+                data-score={15}
+                style={
+                    Object {
+                        "background": "#f1c83f",
+                        "paddingTop": "50%",
+                        "width": "50%",
+                      }
+                }
+            />
+        </div>
+        <div
+            className="Worm-col"
+        >
+            <div
+                className="Worm-score"
+                data-label="Sit"
+                data-score={16}
+                style={
+                    Object {
+                        "background": "#f1c83f",
+                        "paddingTop": "50%",
+                        "width": "50%",
+                      }
+                }
+            />
+        </div>
+        <div
+            className="Worm-col"
+        >
+            <div
+                className="Worm-score"
+                data-label="Amet"
+                data-score={23}
+                style={
+                    Object {
+                        "background": "#f8e71c",
+                        "paddingTop": "70%",
+                        "width": "70%",
+                      }
+                }
+            />
+        </div>
+        <div
+            className="Worm-col"
+        >
+            <div
+                className="Worm-score"
+                data-label="Consectetur"
+                data-score={42}
+                style={
+                    Object {
+                        "background": "#b8e986",
+                        "paddingTop": "80%",
+                        "width": "80%",
+                      }
+                }
+            />
+        </div>
+    </div>
+</div>,
+]
+`;
+
+exports[`supports custom styles 1`] = `
+Array [
+  <div
+    className="Worm "
+>
+    <svg
+        className="Worm-shape"
+        fill="#eee"
+        preserveAspectRatio="none"
+        viewBox="0 -100 100 200"
+    >
+        <path
+            d="M0,0C0,0,2.9244986527228862,35.27443554092693,8.333333333333334,44.44444444444444C12.400914845846005,51.340524818140516,19.2538736892339,53.76326818344113,25,55.55555555555556C30.387999179015896,57.23613867664355,36.11111111111112,55.555555555555564,41.66666666666667,55.55555555555556C47.22222222222224,55.555555555555564,53.192002902790456,52.73436355426672,58.33333333333334,55.55555555555556C64.48117365489638,58.92904772352797,69.08841141861232,72.0907116933682,75.00000000000001,77.77777777777777C80.27235672507607,82.84989007099325,87.565848971262,93.09866240640353,91.66666666666669,88.88888888888889C98.58557272497116,81.78615239634463,100,0,100,0"
+            transform="translate(0,2) scale(1,-1)"
+        />
+        <path
+            d="M0,0C0,0,2.9244986527228862,35.27443554092693,8.333333333333334,44.44444444444444C12.400914845846005,51.340524818140516,19.2538736892339,53.76326818344113,25,55.55555555555556C30.387999179015896,57.23613867664355,36.11111111111112,55.555555555555564,41.66666666666667,55.55555555555556C47.22222222222224,55.555555555555564,53.192002902790456,52.73436355426672,58.33333333333334,55.55555555555556C64.48117365489638,58.92904772352797,69.08841141861232,72.0907116933682,75.00000000000001,77.77777777777777C80.27235672507607,82.84989007099325,87.565848971262,93.09866240640353,91.66666666666669,88.88888888888889C98.58557272497116,81.78615239634463,100,0,100,0"
+            transform="translate(0,-2)"
+        />
+    </svg>
+    <div
+        className="Worm-row"
+    >
+        <div
+            className="Worm-col"
+        >
+            <div
+                className="Worm-score"
+                data-label={undefined}
+                data-score={4}
+                style={
+                    Object {
+                        "background": "#fd938e",
+                        "color": "white",
+                        "fontSize": "1.4em",
+                        "paddingTop": "40%",
+                        "width": "40%",
+                      }
+                }
+            />
+        </div>
+        <div
+            className="Worm-col"
+        >
+            <div
+                className="Worm-score"
+                data-label={undefined}
+                data-score={8}
+                style={
+                    Object {
+                        "background": "#f1c83f",
+                        "color": "white",
+                        "fontSize": "1.4em",
+                        "paddingTop": "50%",
+                        "width": "50%",
+                      }
+                }
+            />
+        </div>
+        <div
+            className="Worm-col"
+        >
+            <div
+                className="Worm-score"
+                data-label={undefined}
+                data-score={15}
+                style={
+                    Object {
+                        "background": "#f1c83f",
+                        "color": "white",
+                        "fontSize": "1.4em",
+                        "paddingTop": "50%",
+                        "width": "50%",
+                      }
+                }
+            />
+        </div>
+        <div
+            className="Worm-col"
+        >
+            <div
+                className="Worm-score"
+                data-label={undefined}
+                data-score={16}
+                style={
+                    Object {
+                        "background": "#f1c83f",
+                        "color": "white",
+                        "fontSize": "1.4em",
+                        "paddingTop": "50%",
+                        "width": "50%",
+                      }
+                }
+            />
+        </div>
+        <div
+            className="Worm-col"
+        >
+            <div
+                className="Worm-score"
+                data-label={undefined}
+                data-score={23}
+                style={
+                    Object {
+                        "background": "#f8e71c",
+                        "color": "white",
+                        "fontSize": "1.4em",
+                        "paddingTop": "70%",
+                        "width": "70%",
+                      }
+                }
+            />
+        </div>
+        <div
+            className="Worm-col"
+        >
+            <div
+                className="Worm-score"
+                data-label={undefined}
+                data-score={42}
+                style={
+                    Object {
+                        "background": "#b8e986",
+                        "color": "white",
+                        "fontSize": "1.4em",
+                        "paddingTop": "80%",
+                        "width": "80%",
+                      }
+                }
+            />
+        </div>
+    </div>
+</div>,
+]
+`;
+
+exports[`supports negative scores 1`] = `
+Array [
+  <div
+    className="Worm "
+>
+    <svg
+        className="Worm-shape"
+        fill="#eee"
+        preserveAspectRatio="none"
+        viewBox="0 -100 100 200"
+    >
+        <path
+            d="M0,0C0,0,3.7825116538832178,35.286212626472484,10,44.44444444444444C14.885732160775055,51.641026928888486,23.617344381731314,50.40220374493286,30,55.55555555555556C37.00917069466703,61.21475521328732,42.990829305332966,72.118578120046,50,77.77777777777777C56.38265561826869,82.93112958840048,63.33333333333335,85.1851851851852,70,88.88888888888889C76.66666666666667,92.59259259259261,85.08084107142409,105.09235882102182,90,100C98.25739286773096,91.45187052925614,100,0,100,0"
+            transform="translate(0,2) scale(1,-1)"
+        />
+        <path
+            d="M0,0C0,0,3.7825116538832178,35.286212626472484,10,44.44444444444444C14.885732160775055,51.641026928888486,23.617344381731314,50.40220374493286,30,55.55555555555556C37.00917069466703,61.21475521328732,42.990829305332966,72.118578120046,50,77.77777777777777C56.38265561826869,82.93112958840048,63.33333333333335,85.1851851851852,70,88.88888888888889C76.66666666666667,92.59259259259261,85.08084107142409,105.09235882102182,90,100C98.25739286773096,91.45187052925614,100,0,100,0"
+            transform="translate(0,-2)"
+        />
+    </svg>
+    <div
+        className="Worm-row"
+    >
+        <div
+            className="Worm-col"
+        >
+            <div
+                className="Worm-score"
+                data-label={undefined}
+                data-score={-5}
+                style={
+                    Object {
+                        "background": "#fd938e",
+                        "paddingTop": "40%",
+                        "width": "40%",
+                      }
+                }
+            />
+        </div>
+        <div
+            className="Worm-col"
+        >
+            <div
+                className="Worm-score"
+                data-label={undefined}
+                data-score={-2}
+                style={
+                    Object {
+                        "background": "#f1c83f",
+                        "paddingTop": "50%",
+                        "width": "50%",
+                      }
+                }
+            />
+        </div>
+        <div
+            className="Worm-col"
+        >
+            <div
+                className="Worm-score"
+                data-label={undefined}
+                data-score={0}
+                style={
+                    Object {
+                        "background": "#f8e71c",
+                        "paddingTop": "70%",
+                        "width": "70%",
+                      }
+                }
+            />
+        </div>
+        <div
+            className="Worm-col"
+        >
+            <div
+                className="Worm-score"
+                data-label={undefined}
+                data-score={2}
+                style={
+                    Object {
+                        "background": "#b8e986",
+                        "paddingTop": "80%",
+                        "width": "80%",
+                      }
+                }
+            />
+        </div>
+        <div
+            className="Worm-col"
+        >
+            <div
+                className="Worm-score"
+                data-label={undefined}
+                data-score={5}
+                style={
+                    Object {
+                        "background": "#7ed321",
+                        "paddingTop": "90%",
+                        "width": "90%",
+                      }
+                }
+            />
+        </div>
+    </div>
+</div>,
+]
+`;
